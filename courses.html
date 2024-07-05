@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<style>
+    *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+    background-color: white;
+    border-bottom: 1px solid #e0e0e0;
+}
+.navbar .logo {
+    display: flex;
+    align-items: center;
+}
+.navbar .logo img {
+    height: 30px;
+    margin-right: 10px;
+}
+.navbar .logo span {
+    font-size: 24px;
+    font-weight: bold;
+    color: #000;
+}
+.navbar .menu {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.navbar .menu li {
+    margin: 0 10px;
+    position: relative;
+}
+.navbar .menu li a {
+    text-decoration: none;
+    color: #000;
+    font-size: 16px;
+}
+.navbar .menu li a:hover {
+    color: #007bff;
+}
+.navbar .menu li .dropdown {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: white;
+    border: 1px solid #e0e0e0;
+    list-style: none;
+    padding: 10px 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+.navbar .menu li:hover .dropdown {
+    display: block;
+}
+.navbar .menu li .dropdown li {
+    padding: 5px 20px;
+}
+.navbar .menu li .dropdown li a {
+    color: #000;
+}
+.navbar .menu li .dropdown li a:hover {
+    color: blue;
+}
+.navbar .button {
+    background-color:blue;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+}
+.navbar .button:hover {
+    background-color: yellow;
+}
+.comtainer{
+    width: 100%;
+    height: 1000vh;
+}
+.blue{
+    width: 100%;
+    height: 250px;
+    background-color: blue;
+}
+h1{
+    color: white;
+    font-size: 80px;
+    padding-left: 500px;
+    margin-top: 10px;
+    justify-content: center;
+}
+.blue li{
+    list-style-type: none;
+    text-decoration: none;
+    color: white;
+
+}
+.blue li a{
+    color: white;
+    padding-left: 560px;
+    text-decoration: none;
+    list-style-type: none;
+}
+.popular{
+    width: 100%;
+    height: 400px;
+    background-color: rgb(227, 241, 249);
+}
+h2{
+    font-size: 50px;
+    padding-left: 440px;
+}
+.popular p{
+    padding-left: 300px;
+    font-size: 25px;
+}
+.smallnav{
+    margin-top: 30px;
+    margin-left: 250px;
+    width: 700px;
+    height: 30px;
+    border-radius: 2px;
+    background-color: white;
+    
+}
+.smallnav ul li{
+    display: inline;
+    padding-left: 50px;
+    /* margin-left: 50px; */
+    font-size: 20px;
+}
+.smallnav ul li a{
+    text-decoration: none;
+    background-color: rgb(227, 241, 249);
+    padding-left:5px ;
+}
+.allboxes{
+    width: 100%;
+    height: 1000vh;
+    background-color:  rgb(227, 241, 249);
+
+}
+.allboxes .box1{
+    width: 30%;
+    height:800px ;
+    background: white;
+    float: left;
+    margin-left: 30px;
+}
+.allboxes .box2{
+    width: 30%;
+    height:800px ;
+    background: white;
+    float: left;
+    margin-left: 30px;
+}
+.allboxes .box3{
+    width: 30%;
+    height:800px ;
+    background: white;
+    float: left;
+    margin-left: 30px;
+}
+</style>
+</head>
+
+<body>
+    <div class="navbar">
+        <div class="logo">
+            <img src="imgs/logo.png" alt="Logo">
+            <!-- <span>Edulearn</span> -->
+        </div>
+        <ul class="menu">
+            <li><a href="#">Home<span class="dropdown-icon">&#9662;</span></a>
+                <ul class="dropdown">
+                    <li><a href="https://frivalea-finance-template.webflow.io/#">Homepage 01</a></li>
+                    <li><a href="#">Homepage 02</a></li>
+                </ul>
+            </li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Courses</a></li>
+            <li><a href="#">Blog</a></li>
+            <li><a href="#">Pages<span class="dropdown-icon">&#9662;</span></a>
+                <ul class="dropdown">
+                    <li><a href="#">Submenu 1</a></li>
+                    <li><a href="#">Submenu 2</a></li>
+                </ul>
+            </li>
+        </ul>
+        <a href="#" class="button">Purchase Now</a>
+    </div>
+    <div class="container">
+        <div class="blue">
+      <h1>Courses</h1>
+      <li><a href="education.css">HOME >> COURSES</a></li>
+    </div>
+       <div class="popular">
+        <h2><br>Browse Our
+            <br>Popular Courses</h2>
+            <p>Take your career to unique heights in this competitive job market. All the categories<br> you need are here. Choose your most preferred course.</p>
+            <div class="smallnav">
+                <ul>
+                    <li><a style="background-color: #007bff;" href="#"> All</a></li>
+                    <li><a href="#">Art&Design</a></li>
+                    <li><a href="#">Development</a></li>
+                    <li><a href="#">Marketing</a></li>
+                    <li><a href="#">Business</a></li>
+
+                </ul>
+            </div>
+       </div>
+       <div class="allboxes">
+                <div  class="box1"><img src="imgasescoursew/img1.jpg" width="100%"></div>
+                <div class="box2"><img src="imgasescoursew/img2.jpg" width="100%"></div>
+                <div class="box3"><img src="imgasescoursew/img3.jpg" width="100%"></div>
+          </div>
+    </div>
+</body>
+
+</html>
