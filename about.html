@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+    background-color: white;
+    border-bottom: 1px solid #e0e0e0;
+}
+.navbar .logo {
+    display: flex;
+    align-items: center;
+}
+.navbar .logo img {
+    height: 30px;
+    margin-right: 10px;
+}
+.navbar .logo span {
+    font-size: 24px;
+    font-weight: bold;
+    color: #000;
+}
+.navbar .menu {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.navbar .menu li {
+    margin: 0 10px;
+    position: relative;
+}
+.navbar .menu li a {
+    text-decoration: none;
+    color: #000;
+    font-size: 16px;
+}
+.navbar .menu li a:hover {
+    color: #007bff;
+}
+.navbar .menu li .dropdown {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: white;
+    border: 1px solid #e0e0e0;
+    list-style: none;
+    padding: 10px 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+.navbar .menu li:hover .dropdown {
+    display: block;
+}
+.navbar .menu li .dropdown li {
+    padding: 5px 20px;
+}
+.navbar .menu li .dropdown li a {
+    color: #000;
+}
+.navbar .menu li .dropdown li a:hover {
+    color: blue;
+}
+.navbar .button {
+    background-color:blue;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+}
+.navbar .button:hover {
+    background-color: yellow;
+}
+ .head{
+margin-top: 150px;
+height: 200px;
+width: 100%;
+background-color: #007bff;
+} 
+.container .head h1 p{
+    background-color: #007bff;
+}
+.head h1{
+    text-align: center;
+    font-size: 60px;
+    color: #fff;
+}
+.head li a{
+    text-align: center;
+    font-size: 20px;
+    color: #fff;
+    padding-left: 500px;
+}
+  .tab h1{
+    text-align: center;
+    padding-top: 50px;
+    font-size: 50px;
+
+  }
+  .tab img{
+    margin-left: 50px;
+    margin-top: 20px;
+  }
+  .tab p{
+    text-align: center;
+    padding-top: 20px;
+    font-size: 20px;
+  }
+  .tab1{
+    background-color: #000;
+  }
+  .tab1 h1{
+    color: #fff;
+    padding-top: 50px;
+    font-size: 50px;
+
+  }
+  .tab1 p{
+    color: #fff;
+    padding-top: 20px;
+    font-size: 20px;
+  }
+  .img{
+    display: flex;
+    column-gap: 20px;
+    margin-top: 20px;
+  }
+  .tab3{
+    margin-top: 50px;
+  }
+  .tab3 h1{
+    text-align: center;
+    font-size: 40px;
+  }
+  .tab3 p{
+    text-align: center;
+    font-size: 20px;
+  }
+  .box{
+    display: flex;
+    column-gap: 30px;
+    margin-left: 50px;
+    margin-top: 20px;
+  }
+  .b1{
+    height: 400px;
+    width: 400px;
+    background-color: rgb(158, 236, 241);
+
+  }
+  .b2{
+    height: 400px;
+    width: 400px;
+    background-color:  rgb(158, 236, 241);
+    
+  }
+  .b3{
+    height: 400px;
+    width: 400px;
+    background-color: rgb(158, 236, 241);
+    
+  }
+  .b1 img{
+    height: 60px;
+    width: 60px;
+    text-align: center;
+    margin-left: 150px;
+    margin-top: 50px;
+    background-color: #000;
+    border-radius: 60%;
+
+  }
+  .b2 img{
+    height: 60px;
+    width: 60px;
+    text-align: center;
+    margin-left: 150px;
+    margin-top: 50px;
+    background-color: aqua;
+    border-radius: 60px;
+
+  }
+  .b3 img{
+    height: 60px;
+    width: 60px;
+    text-align: center;
+    margin-left: 150px;
+    margin-top: 50px;
+    background-color: #007bff;
+    border-radius: 60px;
+  }
+  .b1 h2{
+    text-align: center;
+    font-size: 40px;
+    padding-top: 30px;
+  }
+  .b2 h2{
+    text-align: center;
+    font-size: 40px;
+    padding-top: 30px;
+  }
+  .b3 h2{
+    text-align: center;
+    font-size: 40px;
+    padding-top: 30px;
+  }
+  .b1 p{
+    padding-top: 20px;
+  }
+  .b2 p{
+    padding-top: 20px;
+  }
+  .b3 p{
+    padding-top: 20px;
+  }
+  .tab4{
+    background-color: #007bff;
+    margin-top: 50px;
+  }
+  .stats-container {
+            display: flex;
+            justify-content: space-around;
+            width: 80%;
+        }
+        .stat {
+            text-align: center;
+        }
+        .stat h1 {
+            font-size: 3em;
+            margin: 0;
+        }
+        .stat p {
+            font-size: 1.5em;
+            margin: 0;
+        }
+        .divider {
+            width: 2px;
+            background-color: white;
+            margin: 0 20px;
+        }
+        .tab5{
+        background-color: #1d6d2e;
+        height: 400px;
+        width: 100%;
+        margin-top: 100px;
+        }
+        .tab5 h1{
+          text-align: center;
+          padding-top: 100px;
+          font-size: 50px;
+          color: #fff;
+        }
+        .tab5 p{
+          text-align: center;
+          font-size: 20px;
+          color: #fff;
+        }
+     
+
+.main2{
+    width: 100%;
+    height: 900px;
+  margin-top: 50px;
+   background-color:#000;
+
+}
+.text2 img{
+    padding: 20px;
+}
+
+.text2 p{
+    color: white;
+    margin-left: 70px;
+    margin-top: -70px;
+    font-size: 30px;
+    padding: 5px;
+}
+.text2 h2{
+    color: white;
+    margin-left: 800px;
+}
+.text2 h3{
+    color: white;
+    padding: 20px;
+    font-size: 22px;
+    font-weight: bold;
+}
+.text2 input{
+margin-left: 800px;
+margin-top: -300px;
+text-align: center;
+width: 220px;
+height: 30px;
+}
+.text2 span{
+    margin-left: 5px;
+    width: 100px;
+    height: 80px;
+    color: blue;
+}
+.menu h4{
+    color: rgb(25, 22, 180);
+    font-size: 30px;
+}
+.menu li a{
+    color: rgb(18, 45, 199);
+    padding: 10px;
+    font-size: 30px;
+}
+.menu1 li a{
+    display: flex;
+}
+
+
+
+.blacktext {
+    display: flex;
+    justify-content: space-around;
+    padding: 20px;
+    background-color: #000;
+}
+
+.l1{
+    width: 20%;
+}
+
+.l1 h3 {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}
+
+.l1 ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.l1 ul li {
+    margin-bottom: 5px;
+}
+
+.l1 ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.l1 ul li a:hover {
+    text-decoration: underline;
+}
+
+.social-media {
+    display: flex;
+    flex-direction: column;
+}
+
+.webflow {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.webflow p {
+    font-size: 0.8em;
+    color: #fff;
+}
+
+
+    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        
+<body>
+    <div class="navbar">
+        <div class="logo">
+            <img src="imgs/logo.png" alt="Logo">
+            <!-- <span>Edulearn</span> -->
+        </div>
+        <ul class="menu">
+            <li><a href="education.html">Home<span class="dropdown-icon">&#9662;</span></a>
+                <ul class="dropdown">
+                    <li><a href="#">Homepage 01</a></li>
+                    <li><a href="#">Homepage 02</a></li>
+                </ul>
+            </li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="courses.html">Courses</a></li>
+            <li><a href="#">Blog</a></li>
+            <li><a href="#">Pages<span class="dropdown-icon">&#9662;</span></a>
+                <ul class="dropdown">
+                    <li><a href="education.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="courses.html">courses</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                </ul>
+            </li>
+        </ul>
+        <a href="#" class="button">Purchase Now</a>
+    </div>
+    <div class="head">
+        <h1>About Us</h1>
+       <li> <a href="edulearn.html">Home >> About us</a></li>
+    </div>
+    <div class="tab">
+        <h1>We Make Your<br> Learning Through Awesome</h1>
+            <img src="imgasescoursew/abimg1.png">
+        
+            <p>Our team of dedicated educators and industry experts curate content that is not only informative but also<br> engaging. We believe in the transformative power of education and aim to provide you with the tools and<br> resources needed to succeed in today's fast-paced world. Maecenas congue sodales neque quis sagittis. <br>> hac habitasse platea dictumst. Donec ex tellus, ultrices id sapien et, bibendum pretium ex. Aliquam pharetra,<br> enim ut dignissim ornare, nibh tellus fringilla elit, in tristique ante velit id quam. Nullam vitae turpis neque. In<br> hac habitasse platea dictumst. Etiam malesuada diam odio, id faucibus lorem tincidunt sed. Integer id dui<br> maximus, volutpat quam id, placerat ligula. Curabitur viverra quis nisi nec luctus. Fusce auctor nisi non metus<br> semper, quis egestas leo ultricies.</p>
+    </div>
+    <div class="tab1">
+        <h1>We Are Providing The<br> Best Quality Online Courses</h1>
+        <p>Our team of dedicated educators and industry experts curate content that is not only informative but also engaging. We<br> believe in the transformative power of education and aim to provide you with the tools and resources needed to succeed<br> in today's fast-paced world. Maecenas congue sodales neque quis sagittis. In hac habitasse platea dictumst. Donec ex<br> tellus, ultrices id sapien et, bibendum pretium ex. Aliquam pharetra, enim ut dignissim ornare, nibh tellus fringilla elit, in<br> tristique ante velit id quam. Nullam vitae turpis neque. In hac habitasse platea dictumst. Etiam malesuada diam odio, id<br> faucibus lorem tincidunt sed.</p>
+        <div class="img">
+         <img src="imgasescoursew/abimg2.png" width="700px">
+        <img src="imgasescoursew/abimg3.png">
+        </div>
+    </div>
+     <div class="tab3">
+        <h1>Our Work Values</h1>
+        <p>Our e-learning platform has garnered praise from learners worldwide. Hear<br> what our users have to say about their experiences</p>
+        <div class="box">
+            <div class=" b1">
+                <img src="imgasescoursew/smllimg.png">
+                <h2>Team Work</h2>
+                <p>Join our group workshops and<br> seminars to connect with like<br> minded individuals on a similar<br> journey of personal growth.</p>
+                
+            </div>
+            <div class=" b2">
+                <img src="imgasescoursew/smallimg2.jfif">
+                <h2>Commitment</h2>
+                <p>Commitment workshops and<br> seminars to connect with like<br> minded individuals on a similar <br>journey of personal growth.</p>
+            </div>
+            <div class=" b3">
+                <img src="imgasescoursew/smallimg3.jfif">
+                <h2>Accessibility</h2>
+                <p>Accessibility workshops and<br> seminars to connect with like<br> minded individuals on a similar<br> journey of personal growth.</p>
+            </div>
+        </div>
+     </div>
+      <div class="tab4">
+        <div class="stats-container">
+            <div class="stat">
+                <p>Enrolled Learner</p>
+                <h1>20,000+</h1>
+            </div>
+            <div class="divider"></div>
+            <div class="stat">
+                <p>Online Courses</p>
+                <h1>500+</h1>
+            </div>
+            <div class="divider"></div>
+            <div class="stat">
+                <p>Satisfaction Rate</p>
+                <h1>500+</h1>
+            </div>
+            <div class="divider"></div>
+            <div class="stat">
+                <p>Awards Winning</p>
+                <h1>500+</h1>
+            </div>
+        </div>
+        </div>
+         <div class="tab5">
+          <h1>Are You Ready<br>To Start Your Course?</h1>
+          <p> Unlock boundless knowledge, cultivate new skills, and empower your future.<br> Join us in redefining education, where curiosity meets convenience</p>
+         </div>
+
+  </div>
+  <div class="main2">
+      <div class="text2">
+          <img src="edulearn.png" alt="" >
+          <p>Edulearn</p>
+          <h2>Subscribe Newsletter</h2>
+          <input type="text" name="email" placeholder="enter user name"><span><button>suscribe now</button></span>
+          <h3>Our mission is to empower learners worldwide, <br> providing a flexible and accessible education that <br> adapts to your pace and preferences.</h3> 
+      </div>
+
+              <div class="blacktext">
+                  <div class="l1">
+                      <h3>Main Pages</h3>
+                      <ul>
+                          <li><a href="productslider.html">Homepage 01</a></li>
+                          <li><a href="productslider.html">Homepage 02</a></li>
+                          <li><a href="productslider.html">About Us 01</a></li>
+                          <li><a href="productslider.html">About Us 02</a></li>
+                          <li><a href="productslider.html">Courses 01</a></li>
+                          <li><a href="productslider.html">Courses 02</a></li>
+                          <li><a href="productslider.html">Blog 01</a></li>
+                          <li><a href="productslider.html">Blog 02</a></li>
+                      </ul>
+                  </div>
+                  <div class="l1">
+                      <h3>CMS Page</h3>
+                      <ul>
+                          <li><a href="productslider.html">Course Details</a></li>
+                          <li><a href="productslider.html">Blog Details</a></li>
+                          <li><a href="productslider.html">Instructor Details</a></li>
+                      </ul>
+                  </div>
+                  <div class="l1">
+                      <h3>Utility Page</h3>
+                      <ul>
+                          <li><a href="productslider.html">404 Not Found</a></li>
+                          <li><a href="productslider.html">Changelog</a></li>
+                          <li><a href="productslider.html">Password Protected</a></li>
+                          <li><a href="productslider.html">License</a></li>
+                          <li><a href="productslider.html">Style Guide</a></li>
+                      </ul>
+                  </div>
+                  <div class="l1">
+                      <h3>Social Media</h3>
+                      <ul class="social-media">
+                          <li><a href="productslider.html">Facebook</a><ion-icon name="logo-facebook"></ion-icon></li>
+                          <li><a href="productslider.html">Twitter</a></li>
+                          <li><a href="productslider.html">LinkedIn</a></li>
+                          <li><a href="productslider.html">Instagram</a></li>
+                      </ul>
+                  </div>
+              </div>
+              <div class="webflow">
+                  <p>Made in Webflow</p>
+              </div>
+          
+      
+      </div>
+  </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,800 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog page</title>
+    <link rel="stylesheet" href="blog.css">
+    <style>*{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    .navbar {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 10px 20px;
+        background-color: white;
+        border-bottom: 1px solid #e0e0e0;
+    }
+    .navbar .logo {
+        display: flex;
+        align-items: center;
+    }
+    .navbar .logo img {
+        height: 30px;
+        margin-right: 10px;
+    }
+    .navbar .logo span {
+        font-size: 24px;
+        font-weight: bold;
+        color: #000;
+    }
+    .navbar .menu {
+        display: flex;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+    .navbar .menu li {
+        margin: 0 10px;
+        position: relative;
+    }
+    .navbar .menu li a {
+        text-decoration: none;
+        color: #000;
+        font-size: 16px;
+    }
+    .navbar .menu li a:hover {
+        color: #007bff;
+    }
+    .navbar .menu li .dropdown {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        background-color: white;
+        border: 1px solid #e0e0e0;
+        list-style: none;
+        padding: 10px 0;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+    .navbar .menu li:hover .dropdown {
+        display: block;
+    }
+    .navbar .menu li .dropdown li {
+        padding: 5px 20px;
+    }
+    .navbar .menu li .dropdown li a {
+        color: #000;
+    }
+    .navbar .menu li .dropdown li a:hover {
+        color: blue;
+    }
+    .navbar .button {
+        background-color:blue;
+        color: white;
+        padding: 10px 20px;
+        border-radius: 5px;
+        text-decoration: none;
+    }
+    .navbar .button:hover {
+        background-color: yellow;
+    }
+    .main{
+        width: 100%;
+        height: 300px;
+        background-color: blue;
+        text-align: center;
+        color: white;
+        font-size: 30px;
+        font-weight: bold;
+    }
+     .n2 h2{
+      text-align: center;
+      font-size: 60px;
+      font-weight: bold;
+    }
+    .n2 p{
+        text-align: center;
+        font-size: 20px;
+    }
+    .n3 {
+        margin-top: 50px;
+        display: flex;
+        background-color: #e9f7fc;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        overflow: hidden;
+        max-width: 800px;
+        width: 2000px;
+        height: 500px;
+    }
+    
+    .imagen4 img {
+        height: 500px;
+        width: 2000px;
+        max-width: 400px;
+        object-fit: cover;
+        
+    }
+    
+    .contentn5 {
+        height: 500px;
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    
+    .post-meta {
+        display: flex;
+        justify-content: space-between;
+        font-size: 14px;
+        color: #666;
+    }
+    
+    h1 {
+        margin: 10px 0;
+        font-size: 24px;
+        color: #333;
+    }
+    
+    p {
+        margin: 10px 0;
+        color: #555;
+    }
+    
+    .read-more {
+        margin-top: auto;
+        color: #007BFF;
+        text-decoration: none;
+        font-weight: bold;
+    }
+    
+    .read-more:hover {
+        text-decoration: underline;
+    }
+    .main3 {
+        margin-top: 70px;
+        text-align: center;
+        padding: 20px;
+        background-color: black;
+        height: 400px;
+    }
+    
+    .header h1 {
+        font-size: 48px;
+        font-weight: bold;
+        margin: 0 0 20px;
+        color: white;
+    }
+    
+     .text p {
+        text-align: center;
+        font-size: 28px;
+        margin: 0 0 40px;
+        color: white;
+    }
+    
+    .categories {
+        display: flex;
+        justify-content: center;
+    }
+    
+    .category {
+        background-color: #333;
+        border: none;
+        color: #fff;
+        padding: 10px 20px;
+        margin: 0 5px;
+        font-size: 16px;
+        cursor: pointer;
+    }
+    
+    .category.active {
+        background-color: #007BFF;
+    }
+    
+    .category:hover {
+        background-color: #555;
+    }
+    .main4{
+        background-color: black;
+        display: flex;
+        margin-top: 30px;
+    }
+    .m{
+        height: 600px;
+    }
+    .m1 img{
+        
+        padding: 20px;
+    }
+    .m1 button{
+        padding: 10px;
+        margin-left: 20px;
+        width: 150px;
+        background-color: lightslategray;
+        color: gold;
+    }
+    
+    .m1 h4{
+        color: white;
+        padding: 20px;
+        font-size: 25px;
+        font-weight: bold;
+    }
+    .m2 img{
+        padding:20px ;
+    }
+    .m2 button{
+        padding: 10px;
+        margin-left: 20px;
+        width: 150px;
+        background-color: lightslategray;
+        color: gold;
+    }
+    
+    .m2 h4{
+        color: white;
+        padding: 20px;
+        font-size: 25px;
+        font-weight: bold;
+    }
+    .main5{
+        background-color: black;
+        display: flex;
+       
+    }
+    .a{
+        height: 600px;
+    }
+    .a1 img{
+        
+        padding: 20px;
+    }
+    .a1 button{
+        padding: 10px;
+        margin-left: 20px;
+        width: 150px;
+        background-color: lightslategray;
+        color: gold;
+    }
+    
+    .a1 h4{
+        color: white;
+        padding: 20px;
+        font-size: 25px;
+        font-weight: bold;
+    }
+    .b{
+        height: 600px;
+    }
+    .b1 img{
+        
+        padding: 20px;
+    }
+    .b1 button{
+        padding: 10px;
+        margin-left: 20px;
+        width: 150px;
+        background-color: lightslategray;
+        color: gold;
+    }
+    
+    .b1 h4{
+        color: white;
+        padding: 20px;
+        font-size: 25px;
+        font-weight: bold;
+    }
+    .main6{
+        background-color: black;
+        display: flex;
+       
+    }
+    .c{
+        height: 600px;
+    }
+    .c1 img{
+        
+        padding: 20px;
+    }
+    .c1 button{
+        padding: 10px;
+        margin-left: 20px;
+        width: 150px;
+        background-color: lightslategray;
+        color: gold;
+    }
+    
+    .c1 h4{
+        color: white;
+        padding: 20px;
+        font-size: 25px;
+        font-weight: bold;
+    }
+    .d{
+        height: 600px;
+    }
+    .d1 img{
+        
+        padding: 20px;
+    }
+    .d1 button{
+        padding: 10px;
+        margin-left: 20px;
+        width: 150px;
+        background-color: lightslategray;
+        color: gold;
+    }
+    
+    .d1 h4{
+        color: white;
+        padding: 20px;
+        font-size: 25px;
+        font-weight: bold;
+    }
+    .main7 h1{
+        color: black;
+        text-align: center;
+        font-size: 50px;
+        font-weight: bold;
+    }
+    .main7 p{
+        text-align: center;
+        font-size: 25px;
+        font-weight: bold;
+    }
+    .main8 {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+        max-width: 1200px;
+        width: 100%;
+      padding: 50px;
+    }
+    
+    .f1{
+        background-color: #e6f7fb;
+        padding: 20px;
+        border-radius: 5px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    
+    .f2 {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        
+    }
+    
+    .f2 span {
+        font-size: 26px;
+        font-weight: bold;
+    }
+    
+    .toggle-btn {
+        background-color: white;
+        border: none;
+        border-radius: 50%;
+        width: 30px;
+        height: 30px;
+        font-size: 20px;
+        cursor: pointer;
+    }
+    
+    .toggle-btn:hover {
+        background-color: #dcdcdc;
+    }
+    .main9{
+        width: 100%;
+        height: 400px;
+        background-color: blue;
+    }
+    .text3 h1{
+        text-align: center;
+        color: white;
+       
+        font-size: 50px;
+        margin-bottom: 30px;
+    }
+    .text3 p{
+        text-align: center;
+        color: white;
+        font-size: 20px;
+    }
+    .main10 {
+        
+        display: flex;
+        justify-content: center;
+        align-items: center;
+       
+        margin: 0;
+    }
+    
+    .button-container {
+        display: flex;
+    }
+    
+    .btn {
+        font-family: Arial, sans-serif;
+        font-size: 16px;
+        padding: 10px 20px;
+        margin: 5px;
+        cursor: pointer;
+        border: none;
+        transition: background-color 0.3s, color 0.3s;
+    }
+    
+    .browse-courses {
+        background-color: white;
+        color: black;
+        border: 1px solid white;
+    }
+    
+    .contact-us {
+        background-color: transparent;
+        color: white;
+        border: 1px solid white;
+    }
+    
+    .btn:hover {
+        background-color: #0056b3; 
+        color: white;
+    }
+    .main2{
+        width: 100%;
+        height: 500px;
+      margin-top: 50px;
+       background-color: black;
+    
+    }
+    .text2 img{
+        padding: 20px;
+    }
+    
+    .text2 p{
+        color: white;
+        margin-left: 70px;
+        margin-top: -70px;
+        font-size: 30px;
+        padding: 5px;
+    }
+    .text2 h2{
+        color: white;
+        margin-left: 800px;
+    }
+    .text2 h3{
+        color: white;
+        padding: 20px;
+        font-size: 22px;
+        font-weight: bold;
+    }
+    .text2 input{
+    margin-left: 800px;
+    margin-top: -300px;
+    text-align: center;
+    width: 220px;
+    height: 30px;
+    }
+    .text2 span{
+        margin-left: 5px;
+        width: 100px;
+        height: 80px;
+        color: blue;
+    }
+    .menu h4{
+        color: rgb(25, 22, 180);
+        font-size: 30px;
+    }
+    .menu li a{
+        color: rgb(18, 45, 199);
+        padding: 10px;
+        font-size: 30px;
+    }
+    .menu1 li a{
+        display: flex;
+    }
+    /* body {
+        font-family: Arial, sans-serif;
+        background-color: #000;
+        color: #fff;
+        margin: 0;
+        padding: 0;
+    } */
+    
+    .blacktext {
+        display: flex;
+        justify-content: space-around;
+        padding: 20px;
+        background-color: #000;
+    }
+    
+    .l1{
+        width: 20%;
+    }
+    
+    .l1 h3 {
+        font-size: 1.2em;
+        margin-bottom: 10px;
+    }
+    
+    .l1 ul {
+        list-style-type: none;
+        padding: 0;
+    }
+    
+    .l1 ul li {
+        margin-bottom: 5px;
+    }
+    
+    .l1 ul li a {
+        color: #fff;
+        text-decoration: none;
+    }
+    
+    .l1 ul li a:hover {
+        text-decoration: underline;
+    }
+    
+    .social-media {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .webflow {
+        text-align: center;
+        margin-top: 10px;
+    }
+    
+    .webflow p {
+        font-size: 0.8em;
+        color: #fff;
+    }</style>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</head>
+<body>
+    <div class="navbar">
+        <div class="logo">
+            <img src="edulearn.png" alt="Logo">
+        </div>
+        <ul class="menu">
+            <li><a href="education.html">Home<span class="dropdown-icon">&#9662;</span></a>
+                <ul class="dropdown">
+                    <li><a href="#">Homepage 01</a></li>
+                    <li><a href="#">Homepage 02</a></li>
+                </ul>
+            </li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="courses.html">Courses</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="#">Pages<span class="dropdown-icon">&#9662;</span></a>
+                <ul class="dropdown">
+                    <li><a href="education.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="courses.html">courses</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                </ul>
+            </li>
+        </ul>
+        <a href="#" class="button">Purchase Now</a>
+    </div>
+    <div class="main">
+    <div class="n1">
+        <h1>Blog</h1>
+        <p>Home <ion-icon name="chevron-forward-outline"></ion-icon> <ion-icon name="chevron-forward-outline"></ion-icon> Blog</p>
+    </div>
+    </div>
+</div>
+<div class="n2">
+    <h2>Our Latest Articles</h2>
+    <p>Stay ahead of the curve with our latest blog post exploring the emerging trends in <br> e-learning. Learn valuable tips and techniques to effectively</p>
+</div>
+<div class="n3">
+    <div class="imagen4">
+        <img src="ed3.png" alt="Group of people discussing">
+    </div>
+    <div class="contentn5">
+        <div class="post-meta">
+            <span class="date">January 2, 2024</span>
+            <span class="author">Mitchel</span>
+        </div>
+        <h1>Why Product Thinking Is The Next Big Thing In UX Design.</h1>
+        <p>Design a simple ac rhoncus diam turpis consequat vitaes velit orci nec sit ut faucibus tristique facilisi accumsan</p>
+        <a href="#" class="read-more">Read More</a>
+    </div>
+</div>
+<div class="main3">
+    <div class="header">
+        <h1>See Our Latest News And Articles</h1>
+    </div>
+    <div class="text">
+        <p>Stay ahead of the curve with our latest blog post exploring the emerging trends in e-learning. Learn valuable tips and techniques to effectively...</p>
+    </div>
+    <div class="categories">
+        <button class="category active">All</button>
+        <button class="category">Design</button>
+        <button class="category">Development</button>
+        <button class="category">Marketing</button>
+        <button class="category">Business</button>
+    </div>
+</div>
+<div class="main4">
+    <div class="m">
+    <div class="m1">
+        <img src="cd5.png" alt="">
+        <button>Marketing</button>
+        <h4>Why product thinking Is the Next Big Thing in <br>  UX design</h4>   
+    </div>
+    </div>
+    <div class="n">
+    <div class="m2">
+        <img src="cd6.png" alt="">
+        <button>Marketing</button>
+        <h4>Why product thinking Is the Next Big Thing in <br>  UX design</h4> 
+    </div>
+</div>
+</div>
+<div class="main5">
+    <div class="a">
+    <div class="a1">
+        <img src="ed5.png" alt="">
+        <button>Marketing</button>
+        <h4>Why product thinking Is the Next Big Thing in <br>  UX design</h4>   
+    </div>
+    </div>
+    <div class="b">
+    <div class="b1">
+        <img src="ed4.png" alt="">
+        <button>Marketing</button>
+        <h4>Why product thinking Is the Next Big Thing in <br>  UX design</h4> 
+    </div>
+</div>
+</div>
+<div class="main6">
+    <div class="c">
+    <div class="c1">
+        <img src="ed6.png" alt="">
+        <button>Marketing</button>
+        <h4>Why product thinking Is the Next Big Thing in <br>  UX design</h4>   
+    </div>
+    </div>
+    <div class="d">
+    <div class="d1">
+        <img src="ed7.png" alt="">
+        <button>Marketing</button>
+        <h4>Why product thinking Is the Next Big Thing in <br>  UX design</h4> 
+    </div>
+</div>
+</div>
+<div class="main7">
+    <h1>Frequently Asked  Questions</h1>
+    <p>Our e-learning website stands out by offering a personalized and interactive <br> learning experience. We leverage cutting-edge technology</p>
+</div>
+<div class="main8">
+    <div class="f1">
+        <div class="f2">
+            <span>How Do I Enroll In A Course?</span>
+            <button class="toggle-btn">+</button>
+        </div>
+    </div>
+    <div class="f1">
+        <div class="f2">
+            <span>Are The Courses Self-Paced Or Scheduled?</span>
+            <button class="toggle-btn">+</button>
+        </div>
+    </div>
+    <div class="f1">
+        <div class="f2">
+            <span>Is There a Support System For Students?</span>
+            <button class="toggle-btn">+</button>
+        </div>
+    </div>
+    <div class="f1">
+        <div class="f2">
+            <span>What Is The Refund Policy For Course Fees?</span>
+            <button class="toggle-btn">+</button>
+        </div>
+    </div>
+    <div class="f1">
+        <div class="f2">
+            <span>How Do I Enroll In A Course?</span>
+            <button class="toggle-btn">+</button>
+        </div>
+    </div>
+    <div class="f1">
+        <div class="f2">
+            <span>Are The Courses Self-Paced Or Scheduled?</span>
+            <button class="toggle-btn">+</button>
+        </div>
+    </div>
+    <div class="f1">
+        <div class="f2">
+            <span>Is There a Support System For Students?</span>
+            <button class="toggle-btn">+</button>
+        </div>
+    </div>
+    <div class="f1">
+        <div class="f2">
+            <span>What Is The Refund Policy For Course Fees?</span>
+            <button class="toggle-btn">+</button>
+        </div>
+    </div>
+</div>
+<div class="main9">
+    <div class="text3">
+      <h1>Are You Ready <br>
+        To Start Your Course?</h1>
+        <p>Unlock boundless knowledge, cultivate new skills, and empower your future. Join us in <br> redefining education, where curiosity meets convenience</p>
+        <div class="main10">
+            <div class="button-container">
+                <button class="btn browse-courses">Browse Courses</button>
+                <button class="btn contact-us">Contact Us</button>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="main2">
+    <div class="text2">
+        <img src="edulearn.png" alt="" >
+        <p>Edulearn</p>
+        <h2>Subscribe Newsletter</h2>
+        <input type="text" name="email" placeholder="enter user name"><span><button>suscribe now</button></span>
+        <h3>Our mission is to empower learners worldwide, <br> providing a flexible and accessible education that <br> adapts to your pace and preferences.</h3> 
+    </div>
+
+            <div class="blacktext">
+                <div class="l1">
+                    <h3>Main Pages</h3>
+                    <ul>
+                        <li><a href="productslider.html">Homepage 01</a></li>
+                        <li><a href="productslider.html">Homepage 02</a></li>
+                        <li><a href="productslider.html">About Us 01</a></li>
+                        <li><a href="productslider.html">About Us 02</a></li>
+                        <li><a href="productslider.html">Courses 01</a></li>
+                        <li><a href="productslider.html">Courses 02</a></li>
+                        <li><a href="productslider.html">Blog 01</a></li>
+                        <li><a href="productslider.html">Blog 02</a></li>
+                    </ul>
+                </div>
+                <div class="l1">
+                    <h3>CMS Page</h3>
+                    <ul>
+                        <li><a href="productslider.html">Course Details</a></li>
+                        <li><a href="productslider.html">Blog Details</a></li>
+                        <li><a href="productslider.html">Instructor Details</a></li>
+                    </ul>
+                </div>
+                <div class="l1">
+                    <h3>Utility Page</h3>
+                    <ul>
+                        <li><a href="productslider.html">404 Not Found</a></li>
+                        <li><a href="productslider.html">Changelog</a></li>
+                        <li><a href="productslider.html">Password Protected</a></li>
+                        <li><a href="productslider.html">License</a></li>
+                        <li><a href="productslider.html">Style Guide</a></li>
+                    </ul>
+                </div>
+                <div class="l1">
+                    <h3>Social Media</h3>
+                    <ul class="social-media">
+                        <li><a href="productslider.html">Facebook</a><ion-icon name="logo-facebook"></ion-icon></li>
+                        <li><a href="productslider.html">Twitter</a></li>
+                        <li><a href="productslider.html">LinkedIn</a></li>
+                        <li><a href="productslider.html">Instagram</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="webflow">
+                <p>Made in Webflow</p>
+            </div>
+        </div>
+</body>
+</html>
